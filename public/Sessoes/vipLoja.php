@@ -86,8 +86,7 @@
             PRECO_GOLD_TATICAS,
             "",
             "Vip/tatics_comprar.php",
-            "",
-            30
+            ""
         ); ?>
 
         <?php render_vantagem(
