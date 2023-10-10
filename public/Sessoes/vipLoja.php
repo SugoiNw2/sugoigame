@@ -36,14 +36,16 @@
                         <?= $duracao !== FALSE && ($duracao >= atual_segundo()) ? "Extender" : "Comprar" ?>
                     </button>
                 </p>
-                <p>
-                    <button href="<?= $link_dobrao ?>" class="link_confirm btn btn-info"
-                            data-question="Deseja adquirir essa vantagem?"
-                        <?= $userDetails->conta["dobroes"] < $preco_dobrao ? "disabled" : "" ?>>
-                        <?= $preco_dobrao ?> <img src="Imagens/Icones/Dobrao.png"/>
-                        <?= $duracao !== FALSE && ($duracao >= atual_segundo()) ? "Extender" : "Comprar" ?>
-                    </button>
-                </p>
+                <?php if ($link_dobrao !== ""): ?>
+                    <p>
+                        <button href="<?= $link_dobrao ?>" class="link_confirm btn btn-info"
+                                data-question="Deseja adquirir essa vantagem?"
+                            <?= $userDetails->conta["dobroes"] < $preco_dobrao ? "disabled" : "" ?>>
+                            <?= $preco_dobrao ?> <img src="Imagens/Icones/Dobrao.png"/>
+                            <?= $duracao !== FALSE && ($duracao >= atual_segundo()) ? "Extender" : "Comprar" ?>
+                        </button>
+                    </p>
+                <?php endif; ?>
             </div>
         </div>
     </li>
@@ -133,7 +135,7 @@
             "Concede os beníficios do Coup de Burst, Luneta e das Táticas",
             $userDetails->vip["pacote_duracao"],
             PRECO_GOLD_PACOTE,
-            0,
+            "",
             "Vip/pacote_comprar.php?tipo=gold",
             ""
         ); ?>        
