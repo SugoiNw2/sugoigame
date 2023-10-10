@@ -16,10 +16,17 @@ if (!$conect) {
         $tempo_taticas = $userDetails->vip["tatic_duracao"];
         $tempo_coup = $userDetails->vip["coup_de_burst_duracao"];
         $tempo_luneta = $userDetails->vip["luneta_duracao"];
+        $tempo_pacote = $userDetails->vip["pacote_duracao"];
     
         // Defina o tempo base para o "PACOTE VIP"
-        $tempo_base = max($tempo_taticas, $tempo_coup, $tempo_luneta);
+        $tempo_base = max($tempo_taticas, $tempo_coup, $tempo_luneta, $tempo_pacote);
         $tempo_pacote = $tempo_base + 30 * 24 * 60 * 60;
+
+        // Atualize vantagem Pacote com nova duração
+        $tempo_base_pacote = $userDetails->vip["pacote_duracao"] > atual_segundo() ? $userDetails->vip["pacote_duracao"] : atual_segundo();
+        $tempo_pacote_nova = $tempo_base_pacote + 30 * 24 * 60 * 60;
+        $connection->run("UPDATE tb_vip SET pacote = 1, pacote_duracao = ? WHERE id = ?",
+            "ii", array($tempo_pacote_nova, $userDetails->tripulacao["id"]));
     
         // Atualize a vantagem "Táticas" com a nova duração
         $tempo_base_tatic = $userDetails->vip["tatic_duracao"] > atual_segundo() ? $userDetails->vip["tatic_duracao"] : atual_segundo();
