@@ -80,7 +80,7 @@
             "Defina uma posição fixa para cada tripulante antes de combates.",
             $userDetails->vip["tatic_duracao"],
             PRECO_GOLD_TATICAS,
-            PRECO_DOBRAO_TATICAS,
+            "",
             "Vip/tatics_comprar.php",
             "VipDobroes/tatics_comprar.php"
         ); ?>
