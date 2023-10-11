@@ -444,7 +444,7 @@ function chance_esquiva($pers, $alvo) {
 
     $esquiva_haki = max(0, $alvo["haki_esq"] - $pers["haki_esq"]);
 
-    $esquiva = min_max($agl - $pre, 0, 50) + $esquiva_haki;
+    $esquiva = min_max($agl - $pre, 0, 35) + $esquiva_haki;
 
     return round($esquiva);
 }
@@ -481,7 +481,7 @@ function chance_bloq($pers, $alvo) {
 
     $bloq_haki = max(0, $alvo["haki_cri"] - $pers["haki_cri"]);
 
-    $chance_bloq = min_max($res - $pre, 0, 50) + $bloq_haki;
+    $chance_bloq = min_max($res - $pre, 0, 35) + $bloq_haki;
 
     return round($chance_bloq);
 }
