@@ -224,13 +224,13 @@ if (!$pers) {
                         "agl",
                         "Agilidade",
                         "Agilidade",
-                        "Cada ponto aumenta sua chance de se esquivar do ataque inimigo em 1%.<br><b>obs: A porcentagem de chance máxima de se esquivar é de 35%;</b>",
+                        "Cada ponto aumenta sua chance de se esquivar do ataque inimigo em 1%.<br><b>obs: A porcentagem de chance máxima de se esquivar é de 50%;</b>",
                         $pers, $bonus); ?>
                     <?php row_atributo(
                         "res",
                         "Resistência",
                         "Resistencia",
-                        "Cada ponto aumenta sua chance de bloquear o ataque inimgo em 1% e a quantidade de dano absorvido em 1%.<br><b>obs:A porcentagem de chance máxima de bloqueio é de 35%, e a porcentagem máxima de dano absorvido é de 90%.</b>",
+                        "Cada ponto aumenta sua chance de bloquear o ataque inimgo em 1% e a quantidade de dano absorvido em 1%.<br><b>obs:A porcentagem de chance máxima de bloqueio é de 50%, e a porcentagem máxima de dano absorvido é de 90%.</b>",
                         $pers, $bonus); ?>
                     <?php row_atributo(
                         "con",
