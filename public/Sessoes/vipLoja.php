@@ -148,8 +148,8 @@
             PRECO_GOLD_FURTO,
             "",
             "Vip/furto_comprar.php?tpo=gold",
-            "",
-        ) ?>       
+            ""
+        ); ?>       
         
         <?php/* render_vantagem(
             "ocultar.jpg",
