@@ -573,7 +573,7 @@
       - tipo: berries
         quant: 20000
     5:
-     - tipo: xp
+      - tipo: xp
         quant: 500
       - tipo: berries
         quant: 10000000
