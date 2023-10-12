@@ -86,7 +86,8 @@
             PRECO_GOLD_TATICAS,
             "",
             "Vip/tatics_comprar.php",
-            ""
+            "",
+            30
         ); ?>
 
         <?php render_vantagem(
@@ -97,7 +98,8 @@
             PRECO_GOLD_LUNETA,
             PRECO_DOBRAO_LUNETA,
             "Vip/luneta_comprar.php",
-            "VipDobroes/luneta_comprar.php"
+            "VipDobroes/luneta_comprar.php",
+            30
         ); ?>
 
         <?php render_vantagem(
@@ -108,7 +110,8 @@
             PRECO_GOLD_USAR_FORMACOES,
             PRECO_DOBRAO_USAR_FORMACOES,
             "Vip/formacao_comprar.php?tipo=gold",
-            "Vip/formacao_comprar.php?tipo=dobrao"
+            "Vip/formacao_comprar.php?tipo=dobrao",
+            30
         ); ?>
 
         <?php/* render_vantagem(
@@ -130,7 +133,8 @@
             PRECO_GOLD_COUP_DE_BURST,
             PRECO_DOBRAO_COUP_DE_BURST,
             "Vip/coup_de_burst_comprar.php?tipo=gold",
-            "Vip/coup_de_burst_comprar.php?tipo=dobrao"
+            "Vip/coup_de_burst_comprar.php?tipo=dobrao",
+            30
         ); ?>
 
         <?php render_vantagem(
@@ -141,7 +145,8 @@
             PRECO_GOLD_PACOTE,
             "",
             "Vip/pacote_comprar.php?tipo=gold",
-            ""
+            "",
+            30
         ); ?>
 
         <?php render_vantagem(
