@@ -149,7 +149,6 @@
             "",
             "Vip/furto_comprar.php?tpo=gold",
             "",
-            "1"
         ) ?>       
         
         <?php/* render_vantagem(
