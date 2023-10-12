@@ -147,7 +147,7 @@
             $userDetails->vip["furto_duracao"],
             PRECO_GOLD_FURTO,
             "",
-            "Vip/furto_comprar.php?tpo=gold",
+            // "Vip/furto_comprar.php?tpo=gold",
             ""
         ); ?>       
 
