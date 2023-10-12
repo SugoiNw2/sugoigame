@@ -1,4 +1,4 @@
-<?php function render_vantagem($img, $titulo, $descricao, $duracao, $preco_gold, $preco_dobrao, $link_gold, $link_dobrao, $duracao = 30) { ?>
+<?php function render_vantagem($img, $titulo, $descricao, $duracao, $preco_gold, $preco_dobrao, $link_gold, $link_dobrao) { ?>
     <?php global $userDetails; ?>
     <li class="list-group-item">
         <div class="row">
