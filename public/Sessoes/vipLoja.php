@@ -1,4 +1,4 @@
-<?php function render_vantagem($img, $titulo, $descricao, $duracao, $preco_gold, $preco_dobrao, $link_gold, $link_dobrao) { ?>
+<?php function render_vantagem($img, $titulo, $descricao, $duracao, $preco_gold, $preco_dobrao, $link_gold, $link_dobrao, $prazo) { ?>
     <?php global $userDetails; ?>
     <li class="list-group-item">
         <div class="row">
@@ -15,7 +15,11 @@
                 <?php else: ?>
                     <?php if ($duracao == 0 OR $duracao < atual_segundo()) : ?>
                         <p>
-                            Duração: 30 dias
+                            <?php if ($prazo == 1) {
+                                echo "Duração: 1 dia";
+                            } elseif ($prazo == 30) {
+                                echo "Duração: 30 dias";
+                            } ?>
                         </p>
                     <?php else : ?>
                         <p class="text-success">
