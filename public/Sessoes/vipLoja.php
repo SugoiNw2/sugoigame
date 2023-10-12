@@ -87,7 +87,7 @@
             "",
             "Vip/tatics_comprar.php",
             "",
-            30
+            30      
         ); ?>
 
         <?php render_vantagem(
