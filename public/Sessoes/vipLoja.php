@@ -155,9 +155,9 @@
             "Rouba 10% das berries da tripulção derrotada no pvp<br>Limite de 2 'FURTOS' por adversário<br>Obs.: Essa vantagem dura apenas 1 dia e só pode ser comprada a cada 15 dias.",
             $userDetails->vip["furto_duracao"],
             PRECO_GOLD_FURTO,
-            "",
-            "Vip/furto_comprar.php?tpo=gold",
-            "",
+            PRECO_DOBRAO_FURTO,
+            "Vip/furto_comprar.php?tipo=gold",
+            "Vip/furto_comprar.php?tipo=dobrao",
             1
         ); ?>
 
