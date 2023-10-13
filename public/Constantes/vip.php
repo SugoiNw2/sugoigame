@@ -4,6 +4,9 @@ define('PRECO_DOBRAO_LUNETA',                           1560);
 
 define('PRECO_GOLD_PACOTE',                             1500);
 
+define('PRECO_GOLD_FURTO',                              300);
+define('PRECO_DOBRAO_FURTO',                            780);
+
 define('PRECO_GOLD_CONHECIMENTO',                       750);
 define('PRECO_DOBRAO_CONHECIMENTO',                     1800);
 
