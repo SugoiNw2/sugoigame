@@ -150,7 +150,7 @@
         ); ?>
 
         <?php render_vantagem(
-            "pacote.png",
+            "furto.png",
             "Furto",
             "Rouba 10% das berries da tripulção derrotada no pvp<br>Limite de 2 'FURTOS' por adversário<br>Obs.: Essa vantagem dura apenas 1 dia e só pode ser comprada a cada 15 dias.",
             $userDetails->vip["furto_duracao"],
