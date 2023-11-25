@@ -516,8 +516,8 @@ if ($userDetails->combate_pve) {
 
             $connection->run("UPDATE tb_torneio_inscricao SET pontos = pontos + 1 WHERE tripulacao_id = ?", "i", array($vencedor["id"]));
             $connection->run("UPDATE tb_torneio_inscricao SET rodada = rodada + 1 WHERE tripulacao_id = ? OR tripulacao_id = ?", "ii", array($vencedor["id"], $perdedor["id"]));
-        }
-
+        }     
+        
         // envia a noticia para todos
         if ($userDetails->ilha["mar"] > 4) {
             if ($userDetails->combate_pvp["tipo"] == TIPO_COLISEU) {
@@ -856,6 +856,98 @@ if ($userDetails->combate_pve) {
     $connection->run("DELETE FROM tb_combate_special_effect WHERE combate_id = ?", "i", $userDetails->combate_bot["id"]);
     $connection->run("DELETE FROM tb_combate_special_effect WHERE combate_id = ?", "i", $userDetails->combate_bot["id"]);
 }
+
+    // Obtenha os IDs dos combatentes a partir da tabela tb_combate_log
+    $query = $connection->prepare("SELECT id_1, id_2, vencedor FROM tb_combate_log WHERE id_1 = ? and id_2 = ? and vencedor = ? ORDER BY horario DESC LIMIT 1");
+    $query->bind_param("iii", $usuario["pvp"]["id_1"], $usuario["pvp"]["id_2"], $vencedor["id"]);
+    $query->execute();
+    $result = $query->get_result();
+    $combate = $result->fetch_assoc();
+    $combatente1 = $combate["id_1"];
+    $combatente2 = $combate["id_2"];
+    $vencedor_id = $combate["vencedor"];
+    /*echo "combatente1: " . $combatente1 . "<br>";
+    echo "combatente2: " . $combatente2 . "<br>";
+    echo "vencedor_id: " . $vencedor_id . "<br>";*/
+    
+    if ($vencedor_id == $combatente1) {
+        // combatente1 é o vencedor
+    } elseif ($vencedor_id == $combatente2) {
+        // Combatente 2 é o vencedor
+    }
+    
+    $perdedor_id = ($combatente1 == $vencedor_id) ? $combatente2 : $combatente1;
+
+    echo "O vencedor é $vencedor_id e o perdedor é $perdedor_id";
+
+    // Obtenha as informações de furto em uma única consulta
+    $query = $connection->prepare("SELECT furto, furto_duracao_exib FROM tb_vip WHERE id = ?");
+    $query->bind_param("i", $vencedor_id);
+    $query->execute();
+    $result = $query->get_result();
+    $furto_info = $result->fetch_assoc();
+    $furto_ativo = $furto_info["furto"];
+    $furto_duracao = $furto_info["furto_duracao_exib"];
+    $furto_duracao_h = date("Y-m-d H:i:s", strtotime($furto_duracao));
+
+        // echo "A duração do furto é " . $furto_duracao;
+
+        if ($furto_ativo) {
+            // O furto está ativo, você pode prosseguir com o cálculo                
+
+            $furto_ativacao = strtotime($furto_duracao) - (24 * 60 * 60); //subtrai 24 horas da duração do furto
+            
+            echo "O furto foi ativado em" . date("Y-m-d H:i:s", $furto_ativacao);
+
+            $query = $connection->prepare("SELECT COUNT(*) as total FROM tb_combate_log WHERE ((id_1 = ? AND id_2 = ?) OR (id_1 = ? AND id_2 = ?)) AND FIM > ? ");
+            $query->bind_param("iiiis", $combatente1, $combatente2, $combatente2, $combatente1, $furto_ativacao);
+            $query->execute();
+            $result = $query->get_result();
+            $quantidade_batalhas = $result->fetch_assoc()["total"];
+
+            echo "Tiveram $quantidade_batalhas após a ativação do furto";
+
+            if ($quantidade_batalhas <= 2) {
+                                
+                // Obtenha os valores das berries do vencedor e perdedor
+                $query = $connection->prepare("SELECT berries FROM tb_usuarios WHERE id = ?");
+                $query->bind_param("i", $vencedor_id);
+                $query->execute();
+                $result = $query->get_result();
+                $vencedor_berries = $result->fetch_assoc()["berries"];
+
+                $query = $connection->prepare("SELECT berries FROM tb_usuarios WHERE id = ?");
+                $query->bind_param("i", $perdedor_id);
+                $query->execute();
+                $result = $query->get_result();
+                $perdedor_berries = $result->fetch_assoc()["berries"];
+
+                echo "O vencedor tem $vencedor_berries e o perdedor tem $perdedor_berries";
+
+                // Realizar o furto de berries (10% das berries do perdedor)
+                $berries_furtadas = 0.10 * $perdedor_berries;
+                $vencedor_berries2 = $vencedor_berries + $berries_furtadas;
+                $perdedor_berries2 = $perdedor_berries - $berries_furtadas;
+
+                echo "Agora o vencedor tem $vencedor_berries2 e o perdedor tem $perdedor_berries2";
+
+                if ($userDetails->combate_pvp["tipo"] !== TIPO_TORNEIO &&
+                    $userDetails->combate_pvp["tipo"] !== TIPO_CONTROLE_ILHA &&
+                    $userDetails->combate_pvp["tipo"] !== TIPO_COLISEU &&
+                    $userDetails->combate_pvp["tipo"] !== TIPO_LOCALIZADOR_CASUAL &&
+                    $userDetails->combate_pvp["tipo"] !== TIPO_LOCALIZADOR_COMPETITIVO){
+
+                    // Atualizar as berries dos combatentes
+                    $connection->run("UPDATE tb_usuarios SET berries = ? WHERE id = ?",
+                        "ii", array($vencedor_berries2, $vencedor_id));
+                    
+                    $connection->run("UPDATE tb_usuarios SET berries = ? WHERE id = ?",
+                        "ii", array($perdedor_berries2, $perdedor_id));                       
+                   
+                   
+                }
+            }    
+        }
 
 if ($venceu) {
     if ($userDetails->combate_pve && isset($rdm['haki'])) {

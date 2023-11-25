@@ -152,12 +152,25 @@
         <?php render_vantagem(
             "furto.png",
             "Furto",
-            "Rouba 10% das berries da tripulção derrotada no pvp<br>Limite de 2 'FURTOS' por adversário<br>Obs.: Essa vantagem dura apenas 1 dia e só pode ser comprada a cada 15 dias.",
+            "Rouba 10% das berries da tripulção derrotada no pvp<br>Limite de 2 'FURTOS' por adversário<br>Obs.: Esta vantagem dura apenas 1 dia e só pode ser comprada a cada 15 dias.",
             $userDetails->vip["furto_duracao"],
             PRECO_GOLD_FURTO,
             PRECO_DOBRAO_FURTO,
             "Vip/furto_comprar.php?tipo=gold",
             "Vip/furto_comprar.php?tipo=dobrao",
+            1
+        ); ?>
+
+        <?php render_vantagem(
+            "roubo.png",
+            "Roubo",
+            "Rouba um equipamento aleatório da tripulação derrotada<br>Limite de 2 'ROUBOS' por adversário<br>Possivéis equipmentos roubados e suas chances: Cinza 50%, 
+            Branco 30%, Verde 15% e Azul 5%<br>Os equipamentos Pretos e Dourados não podem ser roubado<br>Obs.: Esta vantagem dura 1 dia e só pode ser comprada a cada 15 dias",
+            $userDetails->Vip["roubo_duracao"],
+            PRECO_GOLD_ROUBO,
+            PRECO_DOBRAO_ROUBO,
+            "Vip/roubo_comprar.php?tipo=gold",
+            "Vip/roubo_comprar.php?tipo=dobrao",
             1
         ); ?>
 
