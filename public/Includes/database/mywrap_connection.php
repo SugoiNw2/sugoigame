@@ -72,7 +72,7 @@ final class mywrap_con {
    *  d  for double values
    * @param array||mixed params list of parameters to pass to bind_param
    */
-  public function run($statement, $arg_types = null, $params = null) {
+  /*public function run($statement, $arg_types = null, $params = null) {
     if ($stmnt = $this->link->prepare($statement)) {
 
       if ($arg_types && $params) {
@@ -94,7 +94,46 @@ final class mywrap_con {
       throw new Exception('execute() failed: ' . htmlspecialchars($this->link->error));
     }
     throw new Exception('prepare() failed: ' . htmlspecialchars($this->link->error));
-  }
+  }*/
+
+  public function run($statement, $arg_types = null, $params = null) {
+
+    if (!$stmnt = $this->link->prepare($statement)) {
+        throw new Exception('prepare() failed: ' . htmlspecialchars($this->link->error));
+    }
+
+    if ($arg_types !== null && $params !== null) {
+
+        // garante array
+        if (!is_array($params)) {
+            $params = [$params];
+        }
+
+        // 🔑 remove chaves associativas (PHP 8)
+        $params = array_values($params);
+
+        // primeiro parâmetro é a string de tipos
+        array_unshift($params, $arg_types);
+
+        // cria referências
+        $refs = [];
+        foreach ($params as $k => $v) {
+            $refs[$k] = &$params[$k];
+        }
+
+        if (!call_user_func_array([$stmnt, 'bind_param'], $refs)) {
+            throw new Exception('bind_param() failed: ' . $this->link->error);
+        }
+    }
+
+    if (!$stmnt->execute()) {
+        throw new Exception('execute() failed: ' . htmlspecialchars($this->link->error));
+    }
+
+    $stmnt->store_result();
+    return new mywrap_result($stmnt);
+}
+
 
   /**
    * retrieve the last id that was inserted
