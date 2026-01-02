@@ -28,7 +28,11 @@ class mywrap_result {
           $this->bound_variables[$column->name] =& $this->results[$column->name];
         }
       }
-      call_user_func_array(array($this->statement, 'bind_result'), $this->bound_variables);
+      /*call_user_func_array(array($this->statement, 'get_result'), $this->bound_variables);*/
+      call_user_func_array(
+      array($this->statement, 'bind_result'),
+      array_values($this->bound_variables)
+      );
       $meta->close();
     }
 }

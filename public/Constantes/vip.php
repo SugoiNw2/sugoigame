@@ -13,8 +13,6 @@ define('PRECO_DOBRAO_ROUBO',                            780);
 define('PRECO_GOLD_CONHECIMENTO',                       750);
 define('PRECO_DOBRAO_CONHECIMENTO',                     1800);
 
-define('PRECO_GOLD_PACOTE',                             1500);
-
 define('PRECO_GOLD_COUP_DE_BURST',                      450);
 define('PRECO_DOBRAO_COUP_DE_BURST',                    1080);
 
