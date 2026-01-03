@@ -2,54 +2,58 @@
 $valida = "EquipeSugoiGame2012";
 include "../../Includes/conectdb.php";
 
-$login  = mysql_real_escape_string($_POST["login"]);
-$senha  = $_POST["senha"];
+$login = $_POST["login"] ?? null;
+$senha = $_POST["senha"] ?? null;
 
-
-if (!isset($login) || !isset($senha))
-{
-    header("location:../../login.php?erro=1");
-    exit();
-}
-if (!preg_match(EMAIL_FORMAT, $login)) {
+if (!$login || !$senha) {
     header("location:../../login.php?erro=1");
     exit();
 }
 
-if (!empty($login))
-{
-    $result = mysql_query("SELECT conta_id, senha, ativacao, tripulacao_id, beta FROM tb_conta WHERE email = '{$login}' LIMIT 1");
-
-    // Se nao encontrar o login e senha
-    if (mysql_num_rows($result) == 0)
-    {
-        header("location:../../login.php?erro=1");
-        exit();
-    } else
-    {
-        $conta = mysql_fetch_array($result);
-
-        if (!password_verify($senha, $conta["senha"]))
-        {
-            header("location:../../login.php?erro=1");
-            exit();
-        } else if(IS_BETA && $conta['beta'] != 1)
-        {
-            header("location:../../login.php?erro=2");
-            exit();
-        } else
-        {
-            $userDetails->set_authentication($conta["conta_id"]);
-
-            // Redireciona
-            if ($conta["tripulacao_id"])
-                header("location:../../?ses=home");
-            else
-                header("location:../../?ses=seltrip");
-        }
-    }
-} else
-{
+/*if (!preg_match(EMAIL_FORMAT, $login)) {
+    header("location:../../login.php?erro=1");
+    exit();
+}*/
+if (!filter_var($login, FILTER_VALIDATE_EMAIL)) {
     header("location:../../login.php?erro=1");
     exit();
 }
+
+/* consulta segura */
+$result = $connection->run(
+    "SELECT conta_id, senha, ativacao, tripulacao_id, beta 
+     FROM tb_conta 
+     WHERE email = ? 
+     LIMIT 1",
+    "s",
+    [$login]
+)->fetch_array();
+
+/* não encontrou */
+if (!$result) {
+    header("location:../../login.php?erro=1");
+    exit();
+}
+
+/* senha inválida */
+if (!password_verify($senha, $result["senha"])) {
+    header("location:../../login.php?erro=1");
+    exit();
+}
+
+/* beta */
+if (IS_BETA && $result["beta"] != 1) {
+    header("location:../../login.php?erro=2");
+    exit();
+}
+
+/* login OK */
+$userDetails->set_authentication($result["conta_id"]);
+
+/* redirecionamento */
+if ($result["tripulacao_id"]) {
+    header("location:../../?ses=home");
+} else {
+    header("location:../../?ses=seltrip");
+}
+exit();
