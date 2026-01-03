@@ -58,5 +58,4 @@ if (!empty($conta["tripulacao_id"])) {
 } else {
     header("location:../../?ses=seltrip");
 }
-
 exit();
