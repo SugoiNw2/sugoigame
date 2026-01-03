@@ -8,6 +8,15 @@
 	{
 		$this->userDetails = $userDetails;
 		$this->connection = $connection;
+		
+		if (
+        	!isset($this->userDetails->tripulacao) ||
+        	!is_array($this->userDetails->tripulacao) ||
+        	!isset($this->userDetails->tripulacao["id"])
+    	) {
+        	$this->buffs_ativos = [];
+        	return;
+    	}
 		$this->buffs_spec = DataLoader::load("buffs_tripulacao");
 		$this->_expira_buffs();
 		$buffs = $this->connection->run("SELECT * FROM tb_tripulacao_buff WHERE tripulacao_id = ?", "i", array($this->userDetails->tripulacao["id"]))->fetch_all_array();
