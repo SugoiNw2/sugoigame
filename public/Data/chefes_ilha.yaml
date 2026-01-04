@@ -398,74 +398,64 @@
 44:   # Punk Hazard => lvl 47 => (188 + 65) => 253 * 15 => 3795 pontos
   rdm: 65
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 78
+      tipo: reagent
 
 45:   # Ilha Yukiryu => lvl 48 => (192 + 65) => 257 * 15 => 3855 pontos
   rdm: 66
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 79
+      tipo: reagent
 
 46:   # Ilha Raijin => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 67
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 80
+      tipo: reagent
 
-48: # Green Bit => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
+48: # Dressrossa => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 127
   recompensas:
-    - tipo: reagent
-      cod_item: 146
-      quant: 1
-    - tipo: alcunha
-      cod_titulo: 81
+    - quant: 1
+      tipo: akuma
 
 49:   # Ilha Whole Cake => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 124
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 80
+      tipo: reagent
 
 50: # Wano => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 125
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 81
+      tipo: reagent
 
 51: # Green Bit => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 126
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 81
+      tipo: reagent
 
 52: # New Marineford => lvl 50 => (200 + 65) => 265 * 15 => 3975 pontos
   rdm: 128
   recompensas:
-    - tipo: reagent
-      cod_item: 146
+    - tipo_item: 15
+      cod_item: 156
       quant: 1
-    - tipo: alcunha
-      cod_titulo: 81
+      tipo: reagent
 
 100:   # Laugh Tale => lvl 50 => (100 + 65) => 164 * 9 => 1476 pontos
   rdm: 68
