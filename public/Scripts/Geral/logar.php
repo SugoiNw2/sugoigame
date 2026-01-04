@@ -2,24 +2,23 @@
 $valida = "EquipeSugoiGame2012";
 include "../../Includes/conectdb.php";
 
-$login = $_POST["login"] ?? null;
-$senha = $_POST["senha"] ?? null;
-
-if (!$login || !$senha) {
-    header("location:../../login.php?erro=1");
+// 1️⃣ Garante POST
+if (!isset($_POST["login"], $_POST["senha"])) {
+    header("location:../../login.php");
     exit();
 }
 
-/*if (!preg_match(EMAIL_FORMAT, $login)) {
-    header("location:../../login.php?erro=1");
-    exit();
-}*/
+// 2️⃣ Normaliza dados
+$login = strtolower(trim($_POST["login"]));
+$senha = trim($_POST["senha"]);
+
+// 3️⃣ Valida email
 if (!filter_var($login, FILTER_VALIDATE_EMAIL)) {
     header("location:../../login.php?erro=1");
     exit();
 }
 
-/* consulta segura */
+// 4️⃣ Busca usuário usando prepared statement da sua classe
 $result = $connection->run(
     "SELECT conta_id, senha, ativacao, tripulacao_id, beta 
      FROM tb_conta 
@@ -27,33 +26,37 @@ $result = $connection->run(
      LIMIT 1",
     "s",
     [$login]
-)->fetch_array();
+);
 
-/* não encontrou */
-if (!$result) {
+// 5️⃣ Verifica se encontrou o usuário
+if (!$result->count()) {
     header("location:../../login.php?erro=1");
     exit();
 }
 
-/* senha inválida */
-if (!password_verify($senha, $result["senha"])) {
+// 6️⃣ Recupera os dados como array associativo
+$conta = $result->fetch(); // array associativo: $conta['conta_id'], $conta['senha'], ...
+
+// 7️⃣ Verifica senha
+if (!password_verify($senha, $conta["senha"])) {
     header("location:../../login.php?erro=1");
     exit();
 }
 
-/* beta */
-if (IS_BETA && $result["beta"] != 1) {
+// 8️⃣ Verifica beta se necessário
+if (defined('IS_BETA') && IS_BETA && isset($conta['beta']) && $conta['beta'] != 1) {
     header("location:../../login.php?erro=2");
     exit();
 }
 
-/* login OK */
-$userDetails->set_authentication($result["conta_id"]);
+// 9️⃣ Autentica o usuário
+$userDetails->set_authentication($conta["conta_id"]);
 
-/* redirecionamento */
-if ($result["tripulacao_id"]) {
+// 🔟 Redireciona de acordo com a tripulação
+if (!empty($conta["tripulacao_id"])) {
     header("location:../../?ses=home");
 } else {
     header("location:../../?ses=seltrip");
 }
+
 exit();
