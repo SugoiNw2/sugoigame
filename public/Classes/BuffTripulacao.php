@@ -8,12 +8,32 @@
 	{
 		$this->userDetails = $userDetails;
 		$this->connection = $connection;
+		
+		if (
+        	!isset($this->userDetails->tripulacao) ||
+        	!is_array($this->userDetails->tripulacao) ||
+        	!isset($this->userDetails->tripulacao["id"])
+    	) {
+        	$this->buffs_ativos = [];
+        	return;
+    	}
 		$this->buffs_spec = DataLoader::load("buffs_tripulacao");
 		$this->_expira_buffs();
 		$buffs = $this->connection->run("SELECT * FROM tb_tripulacao_buff WHERE tripulacao_id = ?", "i", array($this->userDetails->tripulacao["id"]))->fetch_all_array();
 		$this->buffs_ativos = array();
 		foreach ($buffs as $buff) {
-			$this->buffs_ativos[] = array_merge($buff, $this->buffs_spec[$buff["buff_id"]]);
+
+    		if (!is_array($buff)) {
+        	continue;
+    		}
+
+    		if (!isset($buff["buff_id"])) {
+        	continue;
+    		}
+
+    		$spec = $this->buffs_spec[$buff["buff_id"]] ?? [];
+
+    		$this->buffs_ativos[] = array_merge($buff, $spec);
 		}
 		$buffs = $this->connection->run("SELECT * FROM tb_buff_global WHERE expiracao > ?", "i", array(atual_segundo()))->fetch_all_array();
 		foreach ($buffs as $buff) {
