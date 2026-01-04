@@ -1,38 +1,20 @@
 <?php
-// GARANTE QUE SEJA ARRAY
-$conta = is_array($userDetails->conta) ? $userDetails->conta : [];
-$tripulacao = is_array($userDetails->tripulacao) ? $userDetails->tripulacao : [];
-$ilha = is_array($userDetails->ilha) ? $userDetails->ilha : [];
-$navio = is_array($userDetails->navio) ? $userDetails->navio : [];
-
-// FLAGS
-$contaOk = !empty($conta);
-$conect = !empty($tripulacao);
-$inrota = !empty($userDetails->rotas);
-$innavio = !empty($navio);
-
-// BASE DO USUÁRIO
-$usuario = $tripulacao;
-
-// CONTA
-$usuario["conta_id"] = $conta["conta_id"] ?? null;
-$usuario["email"]    = $conta["email"] ?? null;
-
-// TRIPULAÇÃO
-$id = $tripulacao["id"] ?? null;
-
-// ILHA
-$usuario["mar"]  = $ilha["mar"] ?? null;
-$usuario["ilha"] = $ilha["ilha"] ?? null;
-
-// NAVIO
-$usuario["capacidade_iventario"] = $navio["capacidade_inventario"] ?? 0;
-
-// VIP / OUTROS
-$usuario_vip = $userDetails->vip ?? false;
-$inally = !empty($userDetails->ally);
-$usuario["alianca"] = $userDetails->ally ?? null;
-
+$contaOk = !!$userDetails->conta;
+$conta = $userDetails->conta;
+$conect = !!$userDetails->tripulacao;
+$inrota = !!$userDetails->rotas;
+$usuario = $userDetails->tripulacao;
+$usuario["conta_id"] = $conta["conta_id"];
+$usuario["email"] = $conta["email"];
+$id = $userDetails->tripulacao ? $userDetails->tripulacao["id"] : NULL;
+$inilha = $userDetails->in_ilha;
+$usuario["mar"] = $userDetails->ilha ? $userDetails->ilha["mar"] : NULL;
+$usuario["ilha"] = $userDetails->ilha ? $userDetails->ilha["ilha"] : NULL;
+$usuario["capacidade_iventario"] = $userDetails->navio ? $userDetails->navio["capacidade_inventario"] : 0;
+$inrota = !!$userDetails->rotas;
+$innavio = !!$userDetails->navio;
+$usuario_vip = $userDetails->vip;
+$personagem = $userDetails->personagens;
 
 if ($innavio) {
     $navio = $userDetails->navio;
