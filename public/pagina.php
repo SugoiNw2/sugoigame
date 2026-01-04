@@ -177,7 +177,7 @@ $facebook_url = "https://www.facebook.com/dialog/oauth?client_id=444646756906612
                                         WHERE conc.tripulacao_id = ?",
                                     "i", array($userDetails->tripulacao["id"])
                                 )->fetch_array()["total"]; ?>
-                                <?php $chefes_total = 47 ?>
+                                <?php $chefes_total = 52 ?>
                                 <?php render_progress(
                                     "progress-chefes",
                                     $chefes_derrotados / $chefes_total,
