@@ -54,6 +54,7 @@ if (!function_exists('nome_ilha')) {
             case 41:    return "Thriller Bark";
             case 42:    return "Sabaody";
             case 43:    return "Mariejois";
+            case 53:    return "Kamabakka";
 
             //Novo Mundo
             case 44:    return "Punk Hazard";
