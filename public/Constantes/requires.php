@@ -1,7 +1,11 @@
 <?php
-$env = 'dev';
-if (in_array($_SERVER['HTTP_HOST'], ['sugoigame.com.br', 'map.sugoigame.com.br']))
-    $env = 'prod';
+$host = explode(':', $_SERVER['HTTP_HOST'])[0];
+
+$env = in_array($host, ['sugoibound.com.br', 'map.sugoibound.com.br'])
+    ? 'prod'
+    : 'dev';
+
+require_once __DIR__ . "/configs.$env.php";
 
 require_once(dirname(__FILE__) . '/configs.' . $env . '.php');
 require_once(dirname(__FILE__) . "/classes.php");
