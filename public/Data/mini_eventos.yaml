@@ -1,6 +1,6 @@
 1:
   nome: Caça instantânea nos Blues
-  duracao: 00:30:00
+  duracao: 00:15:00
   mares:
     - 1
     - 2
@@ -10,30 +10,8 @@
     - 101
   quant: 1
   recompensas:
+  #Bau de equip branco
     1:
-      - tipo: reagent
-        cod_item: 146
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    2:
-      - tipo: wanted
-        quant: 200000
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    3:
-      - tipo: reagent
-        cod_item: 152
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    4:
       - tipo: reagent
         cod_item: 180
         quant: 1
@@ -41,57 +19,122 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    5:
-      - tipo: xp
-        quant: 2000
-      - tipo: berries
-        quant: 20000
-    6:
+  # Osso quebrado
+    2:
+      - tipo: reagent
+        cod_item: 15
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
-    7:
+        quant: 20000
+  # Osso envelhecido
+    3:
+      - tipo: reagent
+        cod_item: 16
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa
+    4:
+      - tipo: reagent
+        cod_item: 20
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa Amarela
+    5:
+      - tipo: reagent
+        cod_item: 21
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ferro
+    6:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # 20 MI berries
+    7:
+      - tipo: xp
+        quant: 5000
+      - tipo: berries
+        quant: 20000000
+  # Presa Vermelha
+    8:
+      - tipo: reagent
+        cod_item: 22
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Branco
+    9:
+      - tipo: reagent
+        cod_item: 25
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Preto
+    10:
+      - tipo: reagent
+        cod_item: 26
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Azul
+    11:
+      - tipo: reagent
+        cod_item: 27
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Azul
+    12:
+      - tipo: reagent
+        cod_item: 30
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Amarela
+    13:
+      - tipo: reagent
+        cod_item: 31
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 2:
   nome: Caça instantânea na Grand Line
-  duracao: 00:30:00
+  duracao: 00:15:00
   mares:
     - 5
   zonas:
     - 102
   quant: 1
   recompensas:
+    #Bau de equip branco
     1:
-      - tipo: reagent
-        cod_item: 146
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    2:
-      - tipo: wanted
-        quant: 200000
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    3:
-      - tipo: reagent
-        cod_item: 152
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    4:
       - tipo: reagent
         cod_item: 180
         quant: 1
@@ -99,57 +142,122 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    5:
-      - tipo: xp
-        quant: 2000
-      - tipo: berries
-        quant: 20000
-    6:
+  # Osso quebrado
+    2:
+      - tipo: reagent
+        cod_item: 15
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
-    7:
+        quant: 20000
+  # Osso envelhecido
+    3:
+      - tipo: reagent
+        cod_item: 16
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa
+    4:
+      - tipo: reagent
+        cod_item: 20
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa Amarela
+    5:
+      - tipo: reagent
+        cod_item: 21
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ferro
+    6:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # 20 MI berries
+    7:
+      - tipo: xp
+        quant: 5000
+      - tipo: berries
+        quant: 20000000
+  # Presa Vermelha
+    8:
+      - tipo: reagent
+        cod_item: 22
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Branco
+    9:
+      - tipo: reagent
+        cod_item: 25
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Preto
+    10:
+      - tipo: reagent
+        cod_item: 26
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Azul
+    11:
+      - tipo: reagent
+        cod_item: 27
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Azul
+    12:
+      - tipo: reagent
+        cod_item: 30
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Amarela
+    13:
+      - tipo: reagent
+        cod_item: 31
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 3:
   nome: Caça instantânea no Novo Mundo
-  duracao: 00:30:00
+  duracao: 00:15:00
   mares:
     - 6
   zonas:
     - 103
   quant: 1
   recompensas:
+  #Bau de equip branco
     1:
-      - tipo: reagent
-        cod_item: 146
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    2:
-      - tipo: wanted
-        quant: 200000
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    3:
-      - tipo: reagent
-        cod_item: 152
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    4:
       - tipo: reagent
         cod_item: 180
         quant: 1
@@ -157,27 +265,114 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    5:
-      - tipo: xp
-        quant: 2000
-      - tipo: berries
-        quant: 20000
-    6:
+  # Osso quebrado
+    2:
+      - tipo: reagent
+        cod_item: 15
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
-    7:
+        quant: 20000
+  # Osso envelhecido
+    3:
+      - tipo: reagent
+        cod_item: 16
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa
+    4:
+      - tipo: reagent
+        cod_item: 20
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Presa Amarela
+    5:
+      - tipo: reagent
+        cod_item: 21
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ferro
+    6:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # 20 MI berries
+    7:
+      - tipo: xp
+        quant: 5000
+      - tipo: berries
+        quant: 20000000
+  # Presa Vermelha
+    8:
+      - tipo: reagent
+        cod_item: 22
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Branco
+    9:
+      - tipo: reagent
+        cod_item: 25
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Preto
+    10:
+      - tipo: reagent
+        cod_item: 26
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Couro Azul
+    11:
+      - tipo: reagent
+        cod_item: 27
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Azul
+    12:
+      - tipo: reagent
+        cod_item: 30
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Escama Amarela
+    13:
+      - tipo: reagent
+        cod_item: 31
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 4:
   nome: Inimigo ameaçador nos Blues
-  duracao: 01:00:00
+  duracao: 00:30:00
   mares:
     - 1
     - 2
@@ -187,174 +382,342 @@
     - 104
   quant: 1
   recompensas:
+  # Osso Seco
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 17
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso
     2:
-      - tipo: wanted
-        quant: 200000
+      - tipo: reagent
+        cod_item: 18
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Vermelho
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 28
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Marrom      
     4:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 29
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso de ótima qualidade
     5:
+      - tipo: reagent
+        cod_item: 19
+        quant: 1
       - tipo: xp
         quant: 2000
       - tipo: berries
         quant: 20000
+   #50 MI Berrie
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
+        quant: 50000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Presa Azul
+    8:
+      - tipo: reagent
+        cod_item: 23
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Presa Verde
+    9:
+      - tipo: reagent
+        cod_item: 24
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Verde
+    10:
+      - tipo: reagent
+        cod_item: 32
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Branca
+    11:
+      - tipo: reagent
+        cod_item: 33
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Preta
+    12:
+      - tipo: reagent
+        cod_item: 34
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
 5:
   nome: Inimigo ameaçador na Grand Line
-  duracao: 01:00:00
+  duracao: 00:30:00
   mares:
     - 5
   zonas:
     - 105
   quant: 1
   recompensas:
+  # Osso Seco
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 17
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso
     2:
-      - tipo: wanted
-        quant: 300000
+      - tipo: reagent
+        cod_item: 18
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Vermelho
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 28
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Marrom      
     4:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 29
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso de ótima qualidade
     5:
+      - tipo: reagent
+        cod_item: 19
+        quant: 1
       - tipo: xp
         quant: 2000
       - tipo: berries
         quant: 20000
+   #50 MI Berrie
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
+        quant: 50000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Presa Azul
+    8:
+      - tipo: reagent
+        cod_item: 23
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Presa Verde
+    9:
+      - tipo: reagent
+        cod_item: 24
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Verde
+    10:
+      - tipo: reagent
+        cod_item: 32
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Branca
+    11:
+      - tipo: reagent
+        cod_item: 33
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Preta
+    12:
+      - tipo: reagent
+        cod_item: 34
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
 6:
   nome: Inimigo ameaçador no Novo Mundo
-  duracao: 01:00:00
+  duracao: 00:30:00
   mares:
     - 6
   zonas:
     - 106
   quant: 1
   recompensas:
+  # Osso Seco
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 17
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso
     2:
-      - tipo: wanted
-        quant: 400000
+      - tipo: reagent
+        cod_item: 18
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Vermelho
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 28
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Couro Marrom      
     4:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 29
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Osso de ótima qualidade
     5:
+      - tipo: reagent
+        cod_item: 19
+        quant: 1
       - tipo: xp
         quant: 2000
       - tipo: berries
         quant: 20000
+   #50 MI Berrie
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 5000000
+        quant: 50000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Presa Azul
+    8:
+      - tipo: reagent
+        cod_item: 23
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Presa Verde
+    9:
+      - tipo: reagent
+        cod_item: 24
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Verde
+    10:
+      - tipo: reagent
+        cod_item: 32
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Branca
+    11:
+      - tipo: reagent
+        cod_item: 33
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
+  # Escama Preta
+    12:
+      - tipo: reagent
+        cod_item: 34
+        quant: 1
+      - tipo: xp
+        quant: 2000
+      - tipo: berries
+        quant: 20000
 7:
   nome: Grande ameaça nos Blues
-  duracao: 02:00:00
+  duracao: 01:00:00
   mares:
     - 1
     - 2
@@ -364,174 +727,324 @@
     - 107
   quant: 1
   recompensas:
+  # Diamante
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 1
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Esmeralda
     2:
-      - tipo: wanted
-        quant: 400000
+      - tipo: reagent
+        cod_item: 5
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Safira
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 5
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 10k XP      
     4:
-      - tipo: reagent
-        cod_item: 180
-        quant: 1
       - tipo: xp
-        quant: 500
+        quant: 10000
       - tipo: berries
-        quant: 20000
+        quant: 2000000
+  # 20k XP      
     5:
       - tipo: xp
-        quant: 2000
-      - tipo: berries
         quant: 20000
+      - tipo: berries
+        quant: 2000000
+  # 30 MI berrie      
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 30000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Chumbo      
+    8:
+      - tipo: reagent
+        cod_item: 70
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Cobre
+    9:
+      - tipo: reagent
+        cod_item: 59
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Estanho
+    10:
+      - tipo: reagent
+        cod_item: 62
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ouro
+    11:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Prata
+    12:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 8:
   nome: Grande ameaça na Grand Line
-  duracao: 02:00:00
+  duracao: 01:00:00
   mares:
     - 5
   zonas:
     - 108
   quant: 1
   recompensas:
+    # Diamante
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 1
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Esmeralda
     2:
-      - tipo: wanted
-        quant: 500000
+      - tipo: reagent
+        cod_item: 5
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Safira
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 5
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 10k XP      
     4:
-      - tipo: reagent
-        cod_item: 180
-        quant: 1
       - tipo: xp
-        quant: 500
+        quant: 10000
       - tipo: berries
-        quant: 20000
+        quant: 2000000
+  # 20k XP      
     5:
       - tipo: xp
-        quant: 2000
-      - tipo: berries
         quant: 20000
+      - tipo: berries
+        quant: 2000000
+  # 30 MI berrie      
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 30000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Chumbo      
+    8:
+      - tipo: reagent
+        cod_item: 70
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Cobre
+    9:
+      - tipo: reagent
+        cod_item: 59
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Estanho
+    10:
+      - tipo: reagent
+        cod_item: 62
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ouro
+    11:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Prata
+    12:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 9:
   nome: Grande ameaça no Novo Mundo
-  duracao: 02:00:00
+  duracao: 01:00:00
   mares:
     - 6
   zonas:
     - 109
   quant: 1
   recompensas:
+    # Diamante
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 1
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Esmeralda
     2:
-      - tipo: wanted
-        quant: 600000
+      - tipo: reagent
+        cod_item: 5
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Safira
     3:
       - tipo: reagent
-        cod_item: 152
+        cod_item: 5
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 10k XP      
     4:
-      - tipo: reagent
-        cod_item: 180
-        quant: 1
       - tipo: xp
-        quant: 500
+        quant: 10000
       - tipo: berries
-        quant: 20000
+        quant: 2000000
+  # 20k XP      
     5:
       - tipo: xp
-        quant: 2000
-      - tipo: berries
         quant: 20000
+      - tipo: berries
+        quant: 2000000
+  # 30 MI berrie      
     6:
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 30000000
+  # Ferro
     7:
       - tipo: reagent
         cod_item: 51
-        quant: 100
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Chumbo      
+    8:
+      - tipo: reagent
+        cod_item: 70
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Cobre
+    9:
+      - tipo: reagent
+        cod_item: 59
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Estanho
+    10:
+      - tipo: reagent
+        cod_item: 62
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ouro
+    11:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Prata
+    12:
+      - tipo: reagent
+        cod_item: 56
+        quant: 50
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 10:
   nome: Monstruosidade nos Blues
-  duracao: 06:00:00
+  duracao: 02:30:00
   mares:
     - 1
     - 2
@@ -541,29 +1054,34 @@
     - 110
   quant: 1
   recompensas:
+  # Aquamarine
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 7
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Topazio      
     2:
-      - tipo: wanted
-        quant: 600000
+      - tipo: reagent
+        cod_item: 9
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Ametista      
     3:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 11
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Frag Ess Verde      
     4:
       - tipo: reagent
         cod_item: 154
@@ -572,43 +1090,84 @@
         quant: 500
       - tipo: berries
         quant: 20000
+  # Rubi      
     5:
+      - tipo: reagent
+        cod_item: 13
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 20000
+  # Akuma Aleatoria      
+    6:
+      - tipo: reagent
+        cod_item: 121
+        quant: 1
+  # Bau Equip Verde      
+    7:
+      - tipo: reagent
+        cod_item: 188
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Est Ess azul     
+    8:
+      - tipo: reagent
+        cod_item: 160
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ess Branca 
+    9:
+      - tipo: reagent
+        cod_item: 153
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
 11:
   nome: Monstruosidade na Grand Line
-  duracao: 06:00:00
+  duracao: 02:30:00
   mares:
     - 5
   zonas:
     - 111
   quant: 1
   recompensas:
+  # Aquamarine
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 7
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Topazio      
     2:
-      - tipo: wanted
-        quant: 800000
+      - tipo: reagent
+        cod_item: 9
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Ametista      
     3:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 11
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Frag Ess Verde      
     4:
       - tipo: reagent
         cod_item: 154
@@ -617,60 +1176,85 @@
         quant: 500
       - tipo: berries
         quant: 20000
+  # Rubi      
     5:
       - tipo: reagent
-        cod_item: 121
+        cod_item: 13
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Akuma Aleatoria      
     6:
+      - tipo: reagent
+        cod_item: 121
+        quant: 1
+  # Bau Equip Verde      
+    7:
+      - tipo: reagent
+        cod_item: 188
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 20000
+  # Est Ess azul     
+    8:
+      - tipo: reagent
+        cod_item: 160
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ess Branca 
+    9:
+      - tipo: reagent
+        cod_item: 153
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
 12:
   nome: Monstruosidade no Novo Mundo
-  duracao: 06:00:00
+  duracao: 02:30:00
   mares:
     - 6
   zonas:
     - 112
   quant: 1
   recompensas:
+  # Aquamarine
     1:
       - tipo: reagent
-        cod_item: 146
+        cod_item: 7
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Topazio      
     2:
-      - tipo: wanted
-        quant: 1000000
+      - tipo: reagent
+        cod_item: 9
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Ametista      
     3:
       - tipo: reagent
-        cod_item: 180
+        cod_item: 11
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Frag Ess Verde      
     4:
-      - tipo: reagent
-        cod_item: 121
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    5:
       - tipo: reagent
         cod_item: 154
         quant: 1
@@ -678,14 +1262,50 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    6:
+  # Rubi      
+    5:
+      - tipo: reagent
+        cod_item: 13
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
-        quant: 10000000
+        quant: 20000
+  # Akuma Aleatoria      
+    6:
+      - tipo: reagent
+        cod_item: 121
+        quant: 1
+  # Bau Equip Verde      
+    7:
+      - tipo: reagent
+        cod_item: 188
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Est Ess azul     
+    8:
+      - tipo: reagent
+        cod_item: 160
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Ess Branca 
+    9:
+      - tipo: reagent
+        cod_item: 153
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
 13:
   nome: Catástrofe nos Blues
-  duracao: 8:00:00
+  duracao: 5:00:00
   mares:
     - 1
     - 2
@@ -695,22 +1315,39 @@
     - 113
   quant: 1
   recompensas:
+  # Ferro
     1:
       - tipo: reagent
         cod_item: 51
-        quant: 300
+        quant: 150
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 50 Mi berries
     2:
-      - tipo: wanted
-        quant: 1000000
+      - tipo: berries
+        quant: 50000000
+  # Bau equip Azul
+    3:
+      - tipo: reagent
+        cod_item: 183
+        quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
-    3:
+  # Akuma no MI
+    4:
+      - tipo: reagent
+        cod_item: 121
+        quant: 1
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Bau equip Verde
+    5:
       - tipo: reagent
         cod_item: 188
         quant: 1
@@ -718,70 +1355,74 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    4:
-      - tipo: reagent
-        cod_item: 19
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    5:
-      - tipo: reagent
-        cod_item: 144
-        quant: 1
-      - tipo: xp
-        quant: 3000
-      - tipo: berries
-        quant: 20000
+  # Lingote de aço
     6:
       - tipo: reagent
-        cod_item: 154
-        quant: 1
+        cod_item: 54
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Lingote de chumbo
     7:
       - tipo: reagent
-        cod_item: 24
-        quant: 1
+        cod_item: 71
+        quant: 10
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Lingote de prata
+    8:
+      - tipo: reagent
+        cod_item: 68
+        quant: 10
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Lingote de cobre
+    9:
+      - tipo: reagent
+        cod_item: 60
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 14:
   nome: Catástrofe na Grand Line
-  duracao: 8:00:00
+  duracao: 5:00:00
   mares:
     - 5
   zonas:
     - 114
   quant: 1
   recompensas:
+# Ferro
     1:
       - tipo: reagent
         cod_item: 51
-        quant: 300
+        quant: 150
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 50 Mi berries
     2:
-      - tipo: wanted
-        quant: 2000000
-      - tipo: xp
-        quant: 500
       - tipo: berries
-        quant: 20000
+        quant: 50000000
+  # Bau equip Azul
     3:
       - tipo: reagent
-        cod_item: 155
+        cod_item: 183
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Akuma no MI
     4:
       - tipo: reagent
         cod_item: 121
@@ -790,6 +1431,7 @@
         quant: 500
       - tipo: berries
         quant: 20000
+  # Bau equip Verde
     5:
       - tipo: reagent
         cod_item: 188
@@ -798,111 +1440,75 @@
         quant: 500
       - tipo: berries
         quant: 20000
+  # Lingote de aço
     6:
       - tipo: reagent
-        cod_item: 33
-        quant: 1
+        cod_item: 54
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Lingote de chumbo
     7:
       - tipo: reagent
-        cod_item: 34
-        quant: 1
+        cod_item: 71
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Lingote de prata
     8:
       - tipo: reagent
-        cod_item: 25
-        quant: 1
+        cod_item: 68
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Lingote de cobre
     9:
       - tipo: reagent
-        cod_item: 26
-        quant: 1
+        cod_item: 60
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
 15:
   nome: Catástrofe no Novo Mundo
-  duracao: 8:00:00
+  duracao: 5:00:00
   mares:
     - 6
   zonas:
     - 115
   quant: 1
   recompensas:
+  # Ferro
     1:
       - tipo: reagent
-        cod_item: 224
-        quant: 1
+        cod_item: 51
+        quant: 150
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # 50 Mi berries
     2:
-      - tipo: wanted
-        quant: 3000000
-      - tipo: xp
-        quant: 500
       - tipo: berries
-        quant: 20000
+        quant: 50000000
+  # Bau equip Azul
     3:
       - tipo: reagent
-        cod_item: 237
+        cod_item: 183
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
+  # Akuma no MI
     4:
-      - tipo: reagent
-        cod_item: 26
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000  
-    5:
-      - tipo: reagent
-        cod_item: 25
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000     
-    6:
-      - tipo: reagent
-        cod_item: 156
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    7:
-      - tipo: reagent
-        cod_item: 34
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000      
-    8:
-      - tipo: reagent
-        cod_item: 188
-        quant: 1
-      - tipo: xp
-        quant: 500
-      - tipo: berries
-        quant: 20000
-    9:
       - tipo: reagent
         cod_item: 121
         quant: 1
@@ -910,18 +1516,47 @@
         quant: 500
       - tipo: berries
         quant: 20000
-    10:
+  # Bau equip Verde
+    5:
       - tipo: reagent
-        cod_item: 33
+        cod_item: 188
         quant: 1
       - tipo: xp
         quant: 500
       - tipo: berries
         quant: 20000
-    11:
+  # Lingote de aço
+    6:
       - tipo: reagent
-        cod_item: 51
-        quant: 300
+        cod_item: 54
+        quant: 10
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Lingote de chumbo
+    7:
+      - tipo: reagent
+        cod_item: 71
+        quant: 10
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Lingote de prata
+    8:
+      - tipo: reagent
+        cod_item: 68
+        quant: 10
+      - tipo: xp
+        quant: 500
+      - tipo: berries
+        quant: 20000
+  # Lingote de cobre
+    9:
+      - tipo: reagent
+        cod_item: 60
+        quant: 10
       - tipo: xp
         quant: 500
       - tipo: berries
